@@ -228,6 +228,8 @@ export const MOCK_PRS: PullRequest[] = [
     diff: {
       prId: 'pr-1',
       filePath: 'payment/webhook.ts',
+      beforeCode: 'async handleWebhook(req, res) { }',
+      afterCode: CODE_LINES.map(l => l.content).join('\n'),
       addedLines: 24,
       removedLines: 8,
       lines: CODE_LINES,
@@ -262,6 +264,8 @@ export const MOCK_PRS: PullRequest[] = [
     diff: {
       prId: 'pr-2',
       filePath: 'auth/jwt.ts',
+      beforeCode: 'export const verifyToken = () => { }',
+      afterCode: 'import jwt from "jsonwebtoken";\nexport const verifyToken = (token: string) => {\n  return jwt.verify(token, process.env.JWT_SECRET);\n}',
       addedLines: 12,
       removedLines: 3,
       lines: [
@@ -328,6 +332,8 @@ export const MOCK_PRS: PullRequest[] = [
     diff: {
       prId: 'pr-3',
       filePath: 'cache/redis.ts',
+      beforeCode: 'const cacheKey = user:id;',
+      afterCode: 'const cacheKey = `user:${id}:data`;',
       addedLines: 8,
       removedLines: 2,
       lines: [

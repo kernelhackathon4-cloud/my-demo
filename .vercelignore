@@ -1,0 +1,24 @@
+# Vercel build 제외 파일
+.git
+.gitignore
+README.md
+node_modules
+npm-debug.log
+.env.local
+.env.*.local
+.next/cache
+coverage
+.DS_Store
+.vscode
+.idea
+*.log
+PROTOTYPE_SUMMARY.md
+GITHUB_SETUP.md
+QUICK_GITHUB_SETUP.md
+VERCEL_DEPLOYMENT.md
+GIT_COMMIT_SUMMARY.md
+CREATE_REPO_INSTRUCTIONS.md
+VERCEL_AUTO_DEPLOY_SETUP.md
+FINAL_DEPLOYMENT.md
+*.md
+!README.md
